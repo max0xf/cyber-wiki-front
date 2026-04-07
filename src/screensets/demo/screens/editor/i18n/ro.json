@@ -1,0 +1,36 @@
+{
+  "title": "Editor Markdown",
+  "loading": "Se încarcă editorul…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Copiază MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Îngroșat",
+    "italic": "Italic",
+    "strike": "Tăiat",
+    "code": "Cod inline",
+    "h1": "Titlu 1",
+    "h2": "Titlu 2",
+    "h3": "Titlu 3",
+    "bullet_list": "Listă cu marcatori",
+    "ordered_list": "Listă numerotată",
+    "quote": "Citat"
+  },
+  "stats": {
+    "words": "Cuvinte",
+    "chars": "Caract.",
+    "lines": "Linii"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

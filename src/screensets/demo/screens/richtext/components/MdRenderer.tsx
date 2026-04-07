@@ -270,39 +270,83 @@ const MdRightClickMenu: React.FC<{
     [loading, getEditor, focusEditor],
   );
 
+  const getSelectedText = useCallback((): string | null => {
+    if (loading) return null;
+    try {
+      let text: string | null = null;
+      getEditor().action((ctx) => {
+        const view = ctx.get(editorViewCtx);
+        const { from, to } = view.state.selection;
+        if (from !== to) {
+          text = view.state.doc.textBetween(from, to, '\n');
+        }
+        return true;
+      });
+      return text;
+    } catch {
+      return null;
+    }
+  }, [loading, getEditor]);
+
+  const deleteEditorSelection = useCallback(() => {
+    try {
+      const editor = getEditor();
+      if (!editor) return;
+      editor.action((ctx) => {
+        const view = ctx.get(editorViewCtx);
+        view.dispatch(view.state.tr.deleteSelection());
+        return true;
+      });
+    } catch { /* context not ready */ }
+  }, [getEditor]);
+
   const handleCut = useCallback(() => {
     focusEditor();
-    requestAnimationFrame(() => document.execCommand('cut'));
-  }, [focusEditor]);
+    requestAnimationFrame(() => {
+      const text = getSelectedText();
+      if (!text) return;
+      navigator.clipboard.writeText(text)
+        .then(deleteEditorSelection)
+        .catch(() => { /* clipboard write failed */ });
+    });
+  }, [focusEditor, getSelectedText, deleteEditorSelection]);
 
   const handleCopy = useCallback(() => {
     focusEditor();
-    requestAnimationFrame(() => document.execCommand('copy'));
-  }, [focusEditor]);
+    requestAnimationFrame(() => {
+      const text = getSelectedText();
+      if (!text) return;
+      navigator.clipboard.writeText(text).catch(() => { /* clipboard write failed */ });
+    });
+  }, [focusEditor, getSelectedText]);
+
+  const pasteIntoEditor = useCallback((text: string) => {
+    try {
+      const editor = getEditor();
+      if (!editor) return;
+      editor.action((ctx) => {
+        const view = ctx.get(editorViewCtx);
+        const parser = ctx.get(parserCtx);
+        const schema = ctx.get(schemaCtx);
+        const doc = parser(text);
+        if (!doc || typeof doc === 'string') return false;
+        const domSerializer = DOMSerializer.fromSchema(schema);
+        const fragment = domSerializer.serializeFragment(doc.content);
+        const domParser = PmDOMParser.fromSchema(schema);
+        const slice = domParser.parseSlice(fragment);
+        view.dispatch(view.state.tr.replaceSelection(slice));
+        return true;
+      });
+    } catch { /* context not ready */ }
+  }, [getEditor]);
 
   const handlePaste = useCallback(() => {
     if (loading) return;
     focusEditor();
-    void navigator.clipboard.readText().then((text) => {
-      requestAnimationFrame(() => {
-        try {
-          getEditor().action((ctx) => {
-            const view = ctx.get(editorViewCtx);
-            const parser = ctx.get(parserCtx);
-            const schema = ctx.get(schemaCtx);
-            const doc = parser(text);
-            if (!doc || typeof doc === 'string') return false;
-            const domSerializer = DOMSerializer.fromSchema(schema);
-            const fragment = domSerializer.serializeFragment(doc.content);
-            const domParser = PmDOMParser.fromSchema(schema);
-            const slice = domParser.parseSlice(fragment);
-            view.dispatch(view.state.tr.replaceSelection(slice));
-            return true;
-          });
-        } catch { /* context not ready */ }
-      });
+    navigator.clipboard.readText().then((text) => {
+      requestAnimationFrame(() => pasteIntoEditor(text));
     });
-  }, [loading, getEditor, focusEditor]);
+  }, [loading, focusEditor, pasteIntoEditor]);
 
   const handleOpenChange = useCallback(
     (open: boolean) => {
@@ -499,6 +543,8 @@ const MdLoaded: React.FC<{
 
   const [, getInstance] = useInstance();
   const prevSourceModeRef = useRef(isSourceMode);
+  const contentRef = useRef(content);
+  contentRef.current = content;
 
   useEffect(() => {
     const wasSource = prevSourceModeRef.current;
@@ -510,7 +556,7 @@ const MdLoaded: React.FC<{
           editor.action((ctx) => {
             const view = ctx.get(editorViewCtx);
             const parser = ctx.get(parserCtx);
-            const doc = parser(content);
+            const doc = parser(contentRef.current);
             if (doc && typeof doc !== 'string') {
               const tr = view.state.tr.replaceWith(0, view.state.doc.content.size, doc.content);
               view.dispatch(tr);
@@ -520,7 +566,7 @@ const MdLoaded: React.FC<{
         }
       } catch { /* editor not ready */ }
     }
-  }, [isSourceMode, content, getInstance]);
+  }, [isSourceMode, getInstance]);
 
   const editorInfo = useEditor((root) => {
     return Editor.make()

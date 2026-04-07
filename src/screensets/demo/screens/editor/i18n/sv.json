@@ -1,0 +1,36 @@
+{
+  "title": "Markdown-editor",
+  "loading": "Laddar editor…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Kopiera MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Fet",
+    "italic": "Kursiv",
+    "strike": "Genomstruken",
+    "code": "Inline-kod",
+    "h1": "Rubrik 1",
+    "h2": "Rubrik 2",
+    "h3": "Rubrik 3",
+    "bullet_list": "Punktlista",
+    "ordered_list": "Numrerad lista",
+    "quote": "Citat"
+  },
+  "stats": {
+    "words": "Ord",
+    "chars": "Tecken",
+    "lines": "Rader"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

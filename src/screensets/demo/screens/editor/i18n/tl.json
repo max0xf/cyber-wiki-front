@@ -1,0 +1,36 @@
+{
+  "title": "Editor ng Markdown",
+  "loading": "Naglo-load ng editor…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Kopyahin ang MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Bold",
+    "italic": "Italic",
+    "strike": "Strikethrough",
+    "code": "Inline na code",
+    "h1": "Heading 1",
+    "h2": "Heading 2",
+    "h3": "Heading 3",
+    "bullet_list": "Bullet list",
+    "ordered_list": "Numeradong listahan",
+    "quote": "Quote"
+  },
+  "stats": {
+    "words": "Salita",
+    "chars": "Karakter",
+    "lines": "Linya"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

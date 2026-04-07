@@ -1,0 +1,36 @@
+{
+  "title": "עורך Markdown",
+  "loading": "טוען עורך…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "העתק MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "מודגש",
+    "italic": "נטוי",
+    "strike": "קו חוצה",
+    "code": "קוד בשורה",
+    "h1": "כותרת 1",
+    "h2": "כותרת 2",
+    "h3": "כותרת 3",
+    "bullet_list": "רשימת תבליטים",
+    "ordered_list": "רשימה ממוספרת",
+    "quote": "ציטוט"
+  },
+  "stats": {
+    "words": "מילים",
+    "chars": "תווים",
+    "lines": "שורות"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

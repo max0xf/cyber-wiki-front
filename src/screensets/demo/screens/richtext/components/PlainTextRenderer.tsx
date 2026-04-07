@@ -153,7 +153,7 @@ export const PlainTextRenderer: React.FC<PlainTextRendererProps> = ({
         onSave={onSave}
         onCopy={handleCopy}
       />
-      <div className="flex-1 overflow-auto">
+      <div className="flex flex-1 flex-col overflow-auto">
         {isEditing ? (
           <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-8 py-6">
             <textarea
@@ -164,10 +164,8 @@ export const PlainTextRenderer: React.FC<PlainTextRendererProps> = ({
             />
           </div>
         ) : (
-          <div className="mx-auto max-w-3xl px-8 py-6">
-            <pre className="whitespace-pre-wrap font-mono text-sm leading-relaxed text-foreground">
-              {content}
-            </pre>
+          <div className="mx-auto w-full max-w-3xl px-8 py-6">
+            <pre className="whitespace-pre-wrap font-mono text-sm leading-relaxed text-foreground">{content}</pre>
           </div>
         )}
       </div>

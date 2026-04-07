@@ -1,0 +1,36 @@
+{
+  "title": "محرر Markdown",
+  "loading": "جارٍ تحميل المحرر…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "نسخ MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "غامق",
+    "italic": "مائل",
+    "strike": "يتوسطه خط",
+    "code": "كود مضمّن",
+    "h1": "عنوان 1",
+    "h2": "عنوان 2",
+    "h3": "عنوان 3",
+    "bullet_list": "قائمة نقطية",
+    "ordered_list": "قائمة مرقمة",
+    "quote": "اقتباس"
+  },
+  "stats": {
+    "words": "كلمات",
+    "chars": "أحرف",
+    "lines": "أسطر"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

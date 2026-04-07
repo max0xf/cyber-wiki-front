@@ -1,0 +1,36 @@
+{
+  "title": "மார்க்டவுன் திருத்தி",
+  "loading": "திருத்தி ஏற்றப்படுகிறது…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "MD நகல்",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "தடிமன்",
+    "italic": "சாய்வு",
+    "strike": "அடிக்கோடு",
+    "code": "இன்லைன் குறியீடு",
+    "h1": "தலைப்பு 1",
+    "h2": "தலைப்பு 2",
+    "h3": "தலைப்பு 3",
+    "bullet_list": "புள்ளி பட்டியல்",
+    "ordered_list": "எண் பட்டியல்",
+    "quote": "மேற்கோள்"
+  },
+  "stats": {
+    "words": "சொற்கள்",
+    "chars": "எழுத்துகள்",
+    "lines": "வரிகள்"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

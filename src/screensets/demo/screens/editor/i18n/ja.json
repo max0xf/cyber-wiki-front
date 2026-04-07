@@ -1,0 +1,36 @@
+{
+  "title": "Markdownエディタ",
+  "loading": "エディタを読み込み中…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "MDをコピー",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "太字",
+    "italic": "斜体",
+    "strike": "取り消し線",
+    "code": "インラインコード",
+    "h1": "見出し1",
+    "h2": "見出し2",
+    "h3": "見出し3",
+    "bullet_list": "箇条書き",
+    "ordered_list": "番号付きリスト",
+    "quote": "引用"
+  },
+  "stats": {
+    "words": "単語",
+    "chars": "文字",
+    "lines": "行"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

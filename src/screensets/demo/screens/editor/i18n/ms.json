@@ -1,0 +1,36 @@
+{
+  "title": "Editor Markdown",
+  "loading": "Memuatkan editor…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Salin MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Tebal",
+    "italic": "Condong",
+    "strike": "Garis potong",
+    "code": "Kod sebaris",
+    "h1": "Tajuk 1",
+    "h2": "Tajuk 2",
+    "h3": "Tajuk 3",
+    "bullet_list": "Senarai peluru",
+    "ordered_list": "Senarai bernombor",
+    "quote": "Petikan"
+  },
+  "stats": {
+    "words": "Perkataan",
+    "chars": "Aksara",
+    "lines": "Baris"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

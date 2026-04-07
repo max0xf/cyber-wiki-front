@@ -7,6 +7,19 @@ import type { MockMap } from '@hai3/react';
 import { mockContentItems, mockDefaultContentId, mockContentList } from './richtextMockData';
 
 /**
+ * Create a mock PUT handler that updates content for a given item ID
+ */
+const mockPutHandler = (id: string) => (requestData: unknown) => {
+  const data = requestData as Record<string, unknown> | undefined;
+  const content = data?.content;
+  if (typeof content === 'string' && mockContentItems[id]) {
+    mockContentItems[id].content = content;
+    mockContentItems[id].updatedAt = new Date().toISOString();
+  }
+  return mockContentItems[id];
+};
+
+/**
  * Mock map for richtext API service
  */
 export const richtextMockMap: MockMap = {
@@ -17,49 +30,9 @@ export const richtextMockMap: MockMap = {
   'GET /api/richtext/contents/doc-py': () => mockContentItems['doc-py'],
   'GET /api/richtext/contents/doc-json': () => mockContentItems['doc-json'],
   'GET /api/richtext/contents/doc-plain': () => mockContentItems['doc-plain'],
-  'PUT /api/richtext/contents/doc-md': (requestData) => {
-    const data = requestData as Record<string, unknown> | undefined;
-    const content = data?.content;
-    if (typeof content === 'string' && mockContentItems['doc-md']) {
-      mockContentItems['doc-md'].content = content;
-      mockContentItems['doc-md'].updatedAt = new Date().toISOString();
-    }
-    return mockContentItems['doc-md'];
-  },
-  'PUT /api/richtext/contents/doc-ts': (requestData) => {
-    const data = requestData as Record<string, unknown> | undefined;
-    const content = data?.content;
-    if (typeof content === 'string' && mockContentItems['doc-ts']) {
-      mockContentItems['doc-ts'].content = content;
-      mockContentItems['doc-ts'].updatedAt = new Date().toISOString();
-    }
-    return mockContentItems['doc-ts'];
-  },
-  'PUT /api/richtext/contents/doc-py': (requestData) => {
-    const data = requestData as Record<string, unknown> | undefined;
-    const content = data?.content;
-    if (typeof content === 'string' && mockContentItems['doc-py']) {
-      mockContentItems['doc-py'].content = content;
-      mockContentItems['doc-py'].updatedAt = new Date().toISOString();
-    }
-    return mockContentItems['doc-py'];
-  },
-  'PUT /api/richtext/contents/doc-json': (requestData) => {
-    const data = requestData as Record<string, unknown> | undefined;
-    const content = data?.content;
-    if (typeof content === 'string' && mockContentItems['doc-json']) {
-      mockContentItems['doc-json'].content = content;
-      mockContentItems['doc-json'].updatedAt = new Date().toISOString();
-    }
-    return mockContentItems['doc-json'];
-  },
-  'PUT /api/richtext/contents/doc-plain': (requestData) => {
-    const data = requestData as Record<string, unknown> | undefined;
-    const content = data?.content;
-    if (typeof content === 'string' && mockContentItems['doc-plain']) {
-      mockContentItems['doc-plain'].content = content;
-      mockContentItems['doc-plain'].updatedAt = new Date().toISOString();
-    }
-    return mockContentItems['doc-plain'];
-  },
+  'PUT /api/richtext/contents/doc-md': mockPutHandler('doc-md'),
+  'PUT /api/richtext/contents/doc-ts': mockPutHandler('doc-ts'),
+  'PUT /api/richtext/contents/doc-py': mockPutHandler('doc-py'),
+  'PUT /api/richtext/contents/doc-json': mockPutHandler('doc-json'),
+  'PUT /api/richtext/contents/doc-plain': mockPutHandler('doc-plain'),
 };

@@ -1,0 +1,36 @@
+{
+  "title": "Markdown szerkesztő",
+  "loading": "Szerkesztő betöltése…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "MD másolása",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Félkövér",
+    "italic": "Dőlt",
+    "strike": "Áthúzott",
+    "code": "Inline kód",
+    "h1": "Címsor 1",
+    "h2": "Címsor 2",
+    "h3": "Címsor 3",
+    "bullet_list": "Felsorolás",
+    "ordered_list": "Számozott lista",
+    "quote": "Idézet"
+  },
+  "stats": {
+    "words": "Szavak",
+    "chars": "Karakterek",
+    "lines": "Sorok"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

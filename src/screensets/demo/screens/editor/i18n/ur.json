@@ -1,0 +1,36 @@
+{
+  "title": "مارک ڈاؤن ایڈیٹر",
+  "loading": "ایڈیٹر لوڈ ہو رہا ہے…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "MD کاپی کریں",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "بولڈ",
+    "italic": "ترچھا",
+    "strike": "کٹا ہوا",
+    "code": "ان لائن کوڈ",
+    "h1": "عنوان 1",
+    "h2": "عنوان 2",
+    "h3": "عنوان 3",
+    "bullet_list": "بلٹ فہرست",
+    "ordered_list": "نمبر والی فہرست",
+    "quote": "اقتباس"
+  },
+  "stats": {
+    "words": "الفاظ",
+    "chars": "حروف",
+    "lines": "سطریں"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

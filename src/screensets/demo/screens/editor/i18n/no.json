@@ -1,0 +1,36 @@
+{
+  "title": "Markdown-editor",
+  "loading": "Laster editor…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Kopier MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Fet",
+    "italic": "Kursiv",
+    "strike": "Gjennomstreking",
+    "code": "Inline-kode",
+    "h1": "Overskrift 1",
+    "h2": "Overskrift 2",
+    "h3": "Overskrift 3",
+    "bullet_list": "Punktliste",
+    "ordered_list": "Nummerert liste",
+    "quote": "Sitat"
+  },
+  "stats": {
+    "words": "Ord",
+    "chars": "Tegn",
+    "lines": "Linjer"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

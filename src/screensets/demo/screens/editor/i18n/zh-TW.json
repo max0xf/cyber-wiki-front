@@ -1,0 +1,36 @@
+{
+  "title": "Markdown 編輯器",
+  "loading": "正在載入編輯器…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "複製 MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "粗體",
+    "italic": "斜體",
+    "strike": "刪除線",
+    "code": "行內程式碼",
+    "h1": "標題 1",
+    "h2": "標題 2",
+    "h3": "標題 3",
+    "bullet_list": "項目符號清單",
+    "ordered_list": "編號清單",
+    "quote": "引用"
+  },
+  "stats": {
+    "words": "字數",
+    "chars": "字元",
+    "lines": "行數"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

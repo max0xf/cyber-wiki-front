@@ -1,0 +1,36 @@
+{
+  "title": "मार्कडाउन संपादक",
+  "loading": "संपादक लोड हो रहा है…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "MD कॉपी",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "बोल्ड",
+    "italic": "इटैलिक",
+    "strike": "स्ट्राइकथ्रू",
+    "code": "इनलाइन कोड",
+    "h1": "शीर्षक 1",
+    "h2": "शीर्षक 2",
+    "h3": "शीर्षक 3",
+    "bullet_list": "बुलेट सूची",
+    "ordered_list": "क्रमांकित सूची",
+    "quote": "उद्धरण"
+  },
+  "stats": {
+    "words": "शब्द",
+    "chars": "अक्षर",
+    "lines": "पंक्तियाँ"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

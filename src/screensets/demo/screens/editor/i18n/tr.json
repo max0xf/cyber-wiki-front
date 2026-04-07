@@ -1,0 +1,36 @@
+{
+  "title": "Markdown Editörü",
+  "loading": "Editör yükleniyor…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "MD'yi kopyala",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Kalın",
+    "italic": "İtalik",
+    "strike": "Üstü çizili",
+    "code": "Satır içi kod",
+    "h1": "Başlık 1",
+    "h2": "Başlık 2",
+    "h3": "Başlık 3",
+    "bullet_list": "Madde işaretli liste",
+    "ordered_list": "Sıralı liste",
+    "quote": "Alıntı"
+  },
+  "stats": {
+    "words": "Kelime",
+    "chars": "Karakter",
+    "lines": "Satır"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

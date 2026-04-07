@@ -3,13 +3,24 @@
  * Mock content items for the richtext API service
  */
 
-import type { RichtextContent } from '../types/richtextTypes';
+import { map } from 'lodash';
+import type { RichtextContent, RichtextContentType } from '../types/richtextTypes';
+
+/**
+ * Factory to create a mock content item with shared defaults
+ */
+const createItem = (
+  id: string,
+  title: string,
+  content: string,
+  contentType: RichtextContentType,
+  language: string,
+  createdAt: string,
+  updatedAt: string,
+): RichtextContent => ({ id, title, content, contentType, language, createdAt, updatedAt });
 
 export const mockContentItems: Record<string, RichtextContent> = {
-  'doc-md': {
-    id: 'doc-md',
-    title: 'Project README',
-    content: `# Project README
+  'doc-md': createItem('doc-md', 'Project README', `# Project README
 
 Welcome to the **Rich Text** content block.
 
@@ -30,16 +41,9 @@ This module detects content type and renders the appropriate editor:
 \`\`\`ts
 const greeting = (name: string) => \`Hello, \${name}!\`;
 \`\`\`
-`,
-    contentType: 'md',
-    language: 'markdown',
-    createdAt: '2025-03-10T08:00:00Z',
-    updatedAt: '2025-04-07T12:00:00Z',
-  },
-  'doc-ts': {
-    id: 'doc-ts',
-    title: 'utils.ts',
-    content: `/**
+`, 'md', 'markdown', '2025-03-10T08:00:00Z', '2025-04-07T12:00:00Z'),
+
+  'doc-ts': createItem('doc-ts', 'utils.ts', `/**
  * Utility helpers
  */
 
@@ -60,16 +64,9 @@ export function debounce<T extends (...args: unknown[]) => void>(
 
 export const capitalize = (s: string): string =>
   s.charAt(0).toUpperCase() + s.slice(1);
-`,
-    contentType: 'ts',
-    language: 'typescript',
-    createdAt: '2025-02-20T14:30:00Z',
-    updatedAt: '2025-04-01T10:00:00Z',
-  },
-  'doc-py': {
-    id: 'doc-py',
-    title: 'main.py',
-    content: `"""
+`, 'ts', 'typescript', '2025-02-20T14:30:00Z', '2025-04-01T10:00:00Z'),
+
+  'doc-py': createItem('doc-py', 'main.py', `"""
 Simple Python script example
 """
 
@@ -88,16 +85,9 @@ def fibonacci(n: int) -> List[int]:
 
 if __name__ == "__main__":
     print(fibonacci(10))
-`,
-    contentType: 'py',
-    language: 'python',
-    createdAt: '2025-01-05T09:00:00Z',
-    updatedAt: '2025-03-28T16:45:00Z',
-  },
-  'doc-json': {
-    id: 'doc-json',
-    title: 'config.json',
-    content: `{
+`, 'py', 'python', '2025-01-05T09:00:00Z', '2025-03-28T16:45:00Z'),
+
+  'doc-json': createItem('doc-json', 'config.json', `{
   "name": "my-project",
   "version": "1.0.0",
   "settings": {
@@ -112,16 +102,9 @@ if __name__ == "__main__":
     "markdown-preview"
   ]
 }
-`,
-    contentType: 'json',
-    language: 'json',
-    createdAt: '2025-02-01T11:00:00Z',
-    updatedAt: '2025-04-05T08:30:00Z',
-  },
-  'doc-plain': {
-    id: 'doc-plain',
-    title: 'notes.txt',
-    content: `Meeting Notes — April 2025
+`, 'json', 'json', '2025-02-01T11:00:00Z', '2025-04-05T08:30:00Z'),
+
+  'doc-plain': createItem('doc-plain', 'notes.txt', `Meeting Notes — April 2025
 
 Attendees: Alice, Bob, Charlie
 
@@ -136,17 +119,12 @@ Action Items:
   - Charlie: update project timeline
 
 Next meeting: April 14, 2025 at 10:00 AM
-`,
-    contentType: 'plain',
-    language: 'plaintext',
-    createdAt: '2025-04-07T10:00:00Z',
-    updatedAt: '2025-04-07T10:30:00Z',
-  },
+`, 'plain', 'plaintext', '2025-04-07T10:00:00Z', '2025-04-07T10:30:00Z'),
 };
 
 export const mockDefaultContentId = 'doc-md';
 
-export const mockContentList = Object.values(mockContentItems).map(({ id, title, contentType }) => ({
+export const mockContentList = map(mockContentItems, ({ id, title, contentType }) => ({
   id,
   title,
   contentType,

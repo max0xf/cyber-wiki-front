@@ -15,26 +15,26 @@ import type { GitViewMode, GitComment, GitCommentReply } from '../types/gitTypes
  * Repository actions
  */
 export const loadRepository = (): void => {
-  void apiRegistry.getService(GitApiService).getRepository().then((repository) => {
+  apiRegistry.getService(GitApiService).getRepository().then((repository) => {
     eventBus.emit(RepoEvents.RepositoryLoaded, { repository });
-  }).catch((err) => {
+  }).catch((err: unknown) => {
     console.warn('[git] loadRepository failed:', err);
   });
 };
 
 export const loadTree = (path: string): void => {
   eventBus.emit(RepoEvents.PathNavigated, { path });
-  void apiRegistry.getService(GitApiService).getTree(path).then((entries) => {
+  apiRegistry.getService(GitApiService).getTree(path).then((entries) => {
     eventBus.emit(RepoEvents.TreeLoaded, { entries });
-  }).catch((err) => {
+  }).catch((err: unknown) => {
     console.warn('[git] loadTree failed:', err);
   });
 };
 
 export const loadBranches = (): void => {
-  void apiRegistry.getService(GitApiService).getBranches().then((branches) => {
+  apiRegistry.getService(GitApiService).getBranches().then((branches) => {
     eventBus.emit(RepoEvents.BranchesLoaded, { branches });
-  }).catch((err) => {
+  }).catch((err: unknown) => {
     console.warn('[git] loadBranches failed:', err);
   });
 };
@@ -48,10 +48,10 @@ export const selectBranch = (branch: string): void => {
  */
 export const selectFile = (path: string): void => {
   eventBus.emit(FileEvents.FileSelected, { path });
-  void apiRegistry.getService(GitApiService).getFileContent(path).then((file) => {
+  apiRegistry.getService(GitApiService).getFileContent(path).then((file) => {
     eventBus.emit(FileEvents.FileLoaded, { file });
     loadComments(path);
-  }).catch((err) => {
+  }).catch((err: unknown) => {
     console.warn('[git] selectFile failed:', err);
   });
 };
@@ -72,9 +72,9 @@ export const saveFile = (path: string, content: string): void => {
  * Comment actions
  */
 export const loadComments = (path: string): void => {
-  void apiRegistry.getService(GitApiService).getComments(path).then((comments) => {
+  apiRegistry.getService(GitApiService).getComments(path).then((comments) => {
     eventBus.emit(CommentEvents.CommentsLoaded, { comments });
-  }).catch((err) => {
+  }).catch((err: unknown) => {
     console.warn('[git] loadComments failed:', err);
   });
 };

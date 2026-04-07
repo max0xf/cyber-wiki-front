@@ -156,23 +156,14 @@ export const CodeRenderer: React.FC<CodeRendererProps> = ({
     return { chars: content.length, lines: content.split('\n').length };
   }, [content]);
 
-  const handleReadOnlyMount: OnMount = useCallback((editor) => {
-    editor.updateOptions({
-      readOnly: true,
-      minimap: { enabled: false },
-      lineNumbers: 'on',
-      scrollBeyondLastLine: false,
-      wordWrap: 'on',
-      folding: true,
-      renderLineHighlight: 'all',
-      fontSize: 13,
-      fontFamily: "'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace",
-    });
-  }, []);
+  const editorRef = React.useRef<Parameters<OnMount>[0] | null>(null);
 
-  const handleEditMount: OnMount = useCallback((editor) => {
+  const isEditingRef = React.useRef(isEditing);
+  isEditingRef.current = isEditing;
+
+  const handleMount: OnMount = useCallback((editor) => {
+    editorRef.current = editor;
     editor.updateOptions({
-      minimap: { enabled: true },
       lineNumbers: 'on',
       scrollBeyondLastLine: false,
       wordWrap: 'on',
@@ -180,18 +171,27 @@ export const CodeRenderer: React.FC<CodeRendererProps> = ({
       fontSize: 13,
       fontFamily: "'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace",
       tabSize: 2,
-      formatOnPaste: true,
-      formatOnType: true,
-      suggestOnTriggerCharacters: true,
-      quickSuggestions: true,
-      renderWhitespace: 'selection',
+      readOnly: !isEditingRef.current,
+      minimap: { enabled: isEditingRef.current },
+      renderWhitespace: isEditingRef.current ? 'selection' : 'none',
     });
-    editor.focus();
+    if (isEditingRef.current) editor.focus();
   }, []);
+
+  React.useEffect(() => {
+    if (editorRef.current) {
+      editorRef.current.updateOptions({
+        readOnly: !isEditing,
+        minimap: { enabled: isEditing },
+        renderWhitespace: isEditing ? 'selection' : 'none',
+      });
+      if (isEditing) editorRef.current.focus();
+    }
+  }, [isEditing]);
 
   const handleChange = useCallback(
     (newValue: string | undefined) => {
-      if (newValue !== undefined) {
+      if (newValue !== undefined && isEditingRef.current) {
         onChange(newValue);
       }
     },
@@ -215,25 +215,14 @@ export const CodeRenderer: React.FC<CodeRendererProps> = ({
       />
       <div className="flex-1 overflow-auto">
         <div className="mx-auto h-full max-w-3xl px-8 py-6">
-          {isEditing ? (
-            <MonacoEditor
-              height="100%"
-              language={monacoLanguage}
-              value={content}
-              onChange={handleChange}
-              onMount={handleEditMount}
-              theme="vs"
-            />
-          ) : (
-            <MonacoEditor
-              height="100%"
-              language={monacoLanguage}
-              value={content}
-              onMount={handleReadOnlyMount}
-              theme="vs"
-              options={{ readOnly: true, minimap: { enabled: false } }}
-            />
-          )}
+          <MonacoEditor
+            height="100%"
+            language={monacoLanguage}
+            value={content}
+            onChange={handleChange}
+            onMount={handleMount}
+            theme="vs"
+          />
         </div>
       </div>
 

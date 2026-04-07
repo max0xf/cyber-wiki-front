@@ -11,7 +11,7 @@ import { RichtextApiService } from '../api/richtextApiService';
  * Load the list of available content items
  */
 export const loadRichtextContentList = (): void => {
-  void apiRegistry.getService(RichtextApiService).listContents().then((items) => {
+  apiRegistry.getService(RichtextApiService).listContents().then((items) => {
     eventBus.emit(RichtextEvents.ContentListLoaded, { items });
   }).catch((err: unknown) => {
     console.warn('[richtext] loadRichtextContentList failed:', err);
@@ -22,7 +22,7 @@ export const loadRichtextContentList = (): void => {
  * Load the default richtext content
  */
 export const loadRichtextContent = (): void => {
-  void apiRegistry.getService(RichtextApiService).getDefaultContent().then((content) => {
+  apiRegistry.getService(RichtextApiService).getDefaultContent().then((content) => {
     eventBus.emit(RichtextEvents.ContentLoaded, { content });
   }).catch((err: unknown) => {
     const message = err instanceof Error ? err.message : String(err);
@@ -35,7 +35,7 @@ export const loadRichtextContent = (): void => {
  * Load specific richtext content by ID
  */
 export const loadRichtextContentById = (id: string): void => {
-  void apiRegistry.getService(RichtextApiService).getContent(id).then((content) => {
+  apiRegistry.getService(RichtextApiService).getContent(id).then((content) => {
     eventBus.emit(RichtextEvents.ContentLoaded, { content });
   }).catch((err: unknown) => {
     const message = err instanceof Error ? err.message : String(err);
@@ -55,7 +55,7 @@ export const updateRichtextContent = (content: string): void => {
  * Save the current richtext content
  */
 export const saveRichtextContent = (id: string, content: string): void => {
-  void apiRegistry.getService(RichtextApiService).saveContent(id, content).then((saved) => {
+  apiRegistry.getService(RichtextApiService).saveContent(id, content).then((saved) => {
     eventBus.emit(RichtextEvents.ContentSaved, { content: saved });
   }).catch((err: unknown) => {
     console.warn('[richtext] saveRichtextContent failed:', err);

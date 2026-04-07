@@ -1,0 +1,36 @@
+{
+  "title": "মার্কডাউন সম্পাদক",
+  "loading": "সম্পাদক লোড হচ্ছে…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "MD কপি",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "বোল্ড",
+    "italic": "ইটালিক",
+    "strike": "স্ট্রাইকথ্রু",
+    "code": "ইনলাইন কোড",
+    "h1": "শিরোনাম ১",
+    "h2": "শিরোনাম ২",
+    "h3": "শিরোনাম ৩",
+    "bullet_list": "বুলেট তালিকা",
+    "ordered_list": "ক্রমিক তালিকা",
+    "quote": "উদ্ধৃতি"
+  },
+  "stats": {
+    "words": "শব্দ",
+    "chars": "অক্ষর",
+    "lines": "লাইন"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

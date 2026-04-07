@@ -1,0 +1,36 @@
+{
+  "title": "ตัวแก้ไข Markdown",
+  "loading": "กำลังโหลดตัวแก้ไข…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "คัดลอก MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "ตัวหนา",
+    "italic": "ตัวเอียง",
+    "strike": "ขีดทับ",
+    "code": "โค้ดในบรรทัด",
+    "h1": "หัวเรื่อง 1",
+    "h2": "หัวเรื่อง 2",
+    "h3": "หัวเรื่อง 3",
+    "bullet_list": "รายการแบบจุด",
+    "ordered_list": "รายการเรียงลำดับ",
+    "quote": "อ้างอิง"
+  },
+  "stats": {
+    "words": "คำ",
+    "chars": "อักขระ",
+    "lines": "บรรทัด"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "ویرایشگر Markdown",
+  "loading": "بارگذاری ویرایشگر…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "کپی MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "ضخیم",
+    "italic": "کج",
+    "strike": "خط‌خورده",
+    "code": "کد درون‌خطی",
+    "h1": "سرتیتر ۱",
+    "h2": "سرتیتر ۲",
+    "h3": "سرتیتر ۳",
+    "bullet_list": "لیست نقطه‌ای",
+    "ordered_list": "لیست شماره‌دار",
+    "quote": "نقل‌قول"
+  },
+  "stats": {
+    "words": "کلمات",
+    "chars": "نویسه‌ها",
+    "lines": "خطوط"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Editor Markdown",
+  "loading": "Caricamento editor…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Copia MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Grassetto",
+    "italic": "Corsivo",
+    "strike": "Barrato",
+    "code": "Codice inline",
+    "h1": "Titolo 1",
+    "h2": "Titolo 2",
+    "h3": "Titolo 3",
+    "bullet_list": "Elenco puntato",
+    "ordered_list": "Elenco numerato",
+    "quote": "Citazione"
+  },
+  "stats": {
+    "words": "Parole",
+    "chars": "Caratt.",
+    "lines": "Righe"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

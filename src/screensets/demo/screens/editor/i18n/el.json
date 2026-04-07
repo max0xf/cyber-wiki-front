@@ -1,0 +1,36 @@
+{
+  "title": "Επεξεργαστής Markdown",
+  "loading": "Φόρτωση επεξεργαστή…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Αντιγραφή MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Έντονα",
+    "italic": "Πλάγια",
+    "strike": "Διαγραμμένα",
+    "code": "Ενσωματωμένος κώδικας",
+    "h1": "Επικεφαλίδα 1",
+    "h2": "Επικεφαλίδα 2",
+    "h3": "Επικεφαλίδα 3",
+    "bullet_list": "Λίστα κουκκίδων",
+    "ordered_list": "Αριθμημένη λίστα",
+    "quote": "Παράθεση"
+  },
+  "stats": {
+    "words": "Λέξεις",
+    "chars": "Χαρακτ.",
+    "lines": "Γραμμές"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

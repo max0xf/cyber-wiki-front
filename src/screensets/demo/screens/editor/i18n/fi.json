@@ -1,0 +1,36 @@
+{
+  "title": "Markdown-editori",
+  "loading": "Ladataan editoria…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Kopioi MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Lihavoitu",
+    "italic": "Kursivoitu",
+    "strike": "Yliviivaus",
+    "code": "Inline-koodi",
+    "h1": "Otsikko 1",
+    "h2": "Otsikko 2",
+    "h3": "Otsikko 3",
+    "bullet_list": "Luettelomerkki",
+    "ordered_list": "Numeroitu luettelo",
+    "quote": "Lainaus"
+  },
+  "stats": {
+    "words": "Sanat",
+    "chars": "Merkit",
+    "lines": "Rivit"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

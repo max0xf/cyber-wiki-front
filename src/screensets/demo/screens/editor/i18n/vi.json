@@ -1,0 +1,36 @@
+{
+  "title": "Trình soạn thảo Markdown",
+  "loading": "Đang tải trình soạn thảo…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Sao chép MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "In đậm",
+    "italic": "In nghiêng",
+    "strike": "Gạch ngang",
+    "code": "Mã nội tuyến",
+    "h1": "Tiêu đề 1",
+    "h2": "Tiêu đề 2",
+    "h3": "Tiêu đề 3",
+    "bullet_list": "Danh sách gạch đầu dòng",
+    "ordered_list": "Danh sách đánh số",
+    "quote": "Trích dẫn"
+  },
+  "stats": {
+    "words": "Từ",
+    "chars": "Ký tự",
+    "lines": "Dòng"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

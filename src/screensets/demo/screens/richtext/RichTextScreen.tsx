@@ -104,6 +104,12 @@ export const RichTextScreen: React.FC = () => {
     loadRichtextContent();
   }, []);
 
+  useEffect(() => {
+    if (richtextState.contentType !== 'md') {
+      setIsSourceMode(false);
+    }
+  }, [richtextState.contentType]);
+
   const handleToggleEdit = useCallback(() => {
     setIsEditing((v) => !v);
   }, []);

@@ -1,0 +1,36 @@
+{
+  "title": "Markdown Editor",
+  "loading": "Editor laden…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "MD kopiëren",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Vet",
+    "italic": "Cursief",
+    "strike": "Doorgestreept",
+    "code": "Inline code",
+    "h1": "Kop 1",
+    "h2": "Kop 2",
+    "h3": "Kop 3",
+    "bullet_list": "Opsommingslijst",
+    "ordered_list": "Genummerde lijst",
+    "quote": "Citaat"
+  },
+  "stats": {
+    "words": "Woorden",
+    "chars": "Tekens",
+    "lines": "Regels"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

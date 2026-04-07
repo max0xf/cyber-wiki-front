@@ -1,0 +1,36 @@
+{
+  "title": "Editor Markdown",
+  "loading": "Memuat editor…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Salin MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Tebal",
+    "italic": "Miring",
+    "strike": "Coret",
+    "code": "Kode inline",
+    "h1": "Judul 1",
+    "h2": "Judul 2",
+    "h3": "Judul 3",
+    "bullet_list": "Daftar poin",
+    "ordered_list": "Daftar bernomor",
+    "quote": "Kutipan"
+  },
+  "stats": {
+    "words": "Kata",
+    "chars": "Karakter",
+    "lines": "Baris"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

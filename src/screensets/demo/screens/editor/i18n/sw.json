@@ -1,0 +1,36 @@
+{
+  "title": "Kihariri cha Markdown",
+  "loading": "Inapakia kihariri…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Nakili MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Nzito",
+    "italic": "Italiki",
+    "strike": "Pigia mstari",
+    "code": "Msimbo wa ndani",
+    "h1": "Kichwa 1",
+    "h2": "Kichwa 2",
+    "h3": "Kichwa 3",
+    "bullet_list": "Orodha ya vitone",
+    "ordered_list": "Orodha ya nambari",
+    "quote": "Nukuu"
+  },
+  "stats": {
+    "words": "Maneno",
+    "chars": "Herufi",
+    "lines": "Mistari"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Editor Markdown",
+  "loading": "Načítání editoru…",
+  "mode_reading": "Reading mode",
+  "mode_source": "Source mode",
+  "copy_md": "Kopírovat MD",
+  "toolbar": {
+    "formatting": "Formatting",
+    "headings": "Headings",
+    "blocks": "Blocks",
+    "bold": "Tučné",
+    "italic": "Kurzíva",
+    "strike": "Přeškrtnuté",
+    "code": "Inline kód",
+    "h1": "Nadpis 1",
+    "h2": "Nadpis 2",
+    "h3": "Nadpis 3",
+    "bullet_list": "Odrážkový seznam",
+    "ordered_list": "Číslovaný seznam",
+    "quote": "Citace"
+  },
+  "stats": {
+    "words": "Slova",
+    "chars": "Znaky",
+    "lines": "Řádky"
+  },
+  "context": {
+    "format": "Format",
+    "paragraph": "Paragraph",
+    "insert": "Insert",
+    "horizontal_rule": "Horizontal Rule",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste"
+  }
+}
