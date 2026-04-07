@@ -13,6 +13,12 @@
     },
     "uikit": {
       "title": "Các phần tử UI Kit"
+    },
+    "editor": {
+      "title": "Markdown Editor"
+    },
+    "richtext": {
+      "title": "Rich Text"
     }
   }
 }

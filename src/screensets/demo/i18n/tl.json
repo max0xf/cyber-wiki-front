@@ -13,6 +13,12 @@
     },
     "uikit": {
       "title": "Mga Elemento ng UI Kit"
+    },
+    "editor": {
+      "title": "Markdown Editor"
+    },
+    "richtext": {
+      "title": "Rich Text"
     }
   }
 }

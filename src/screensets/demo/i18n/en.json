@@ -16,6 +16,12 @@
     },
     "git": {
       "title": "Git Repository"
+    },
+    "editor": {
+      "title": "Markdown Editor"
+    },
+    "richtext": {
+      "title": "Rich Text"
     }
   }
 }

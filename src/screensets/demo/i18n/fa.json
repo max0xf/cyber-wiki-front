@@ -13,6 +13,12 @@
     },
     "uikit": {
       "title": "عناصر مجموعه رابط کاربری"
+    },
+    "editor": {
+      "title": "Markdown Editor"
+    },
+    "richtext": {
+      "title": "Rich Text"
     }
   }
 }

@@ -1,0 +1,21 @@
+# Tasks: Add RichText Screen
+
+- [ ] Add screen ID to ids.ts
+- [ ] Create richtext types (richtextTypes.ts)
+- [ ] Create richtext events (richtextEvents.ts)
+- [ ] Create richtext slice (richtextSlice.ts)
+- [ ] Create richtext effects (richtextEffects.ts)
+- [ ] Create richtext API service + mock data + mock map
+- [ ] Create richtext actions (richtextActions.ts)
+- [ ] Register slice, effects, events, API in demoScreenset.tsx
+- [ ] Create components per Component Plan (BEFORE screen file):
+  - [ ] ContentToolbar
+  - [ ] MdRenderer (Milkdown integration)
+  - [ ] CodeRenderer (CodeViewer/CodeEditor)
+  - [ ] PlainTextRenderer
+  - [ ] ContentBlock (orchestrates renderers by type)
+- [ ] Create screen (RichTextScreen.tsx - orchestrates components, follows EVENTS.md data flow)
+- [ ] Add i18n files for all languages
+- [ ] Add to menu
+- [ ] Validate: `npm run type-check && npm run lint`
+- [ ] Test via Chrome DevTools MCP

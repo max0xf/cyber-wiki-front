@@ -13,6 +13,12 @@
     },
     "uikit": {
       "title": "UI组件元素"
+    },
+    "editor": {
+      "title": "Markdown Editor"
+    },
+    "richtext": {
+      "title": "Rich Text"
     }
   }
 }

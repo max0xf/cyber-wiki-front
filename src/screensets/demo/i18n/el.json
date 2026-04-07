@@ -13,6 +13,12 @@
     },
     "uikit": {
       "title": "Στοιχεία κιτ UI"
+    },
+    "editor": {
+      "title": "Markdown Editor"
+    },
+    "richtext": {
+      "title": "Rich Text"
     }
   }
 }

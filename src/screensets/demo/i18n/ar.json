@@ -13,6 +13,12 @@
     },
     "uikit": {
       "title": "عناصر واجهة المستخدم"
+    },
+    "editor": {
+      "title": "Markdown Editor"
+    },
+    "richtext": {
+      "title": "Rich Text"
     }
   }
 }

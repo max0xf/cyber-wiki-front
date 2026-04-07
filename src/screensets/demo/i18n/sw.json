@@ -13,6 +13,12 @@
     },
     "uikit": {
       "title": "Vipengele vya UI Kit"
+    },
+    "editor": {
+      "title": "Markdown Editor"
+    },
+    "richtext": {
+      "title": "Rich Text"
     }
   }
 }

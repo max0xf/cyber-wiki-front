@@ -1,20 +1,28 @@
 import { type ScreensetConfig, ScreensetCategory, I18nRegistry, Language, screensetRegistry, i18nRegistry } from '@hai3/react';
-import { DEMO_SCREENSET_ID, HOME_SCREEN_ID, CURRENT_THEME_SCREEN_ID, PROFILE_SCREEN_ID, UI_KIT_ELEMENTS_SCREEN_ID, GIT_SCREEN_ID } from './ids';
+import { DEMO_SCREENSET_ID, HOME_SCREEN_ID, CURRENT_THEME_SCREEN_ID, PROFILE_SCREEN_ID, UI_KIT_ELEMENTS_SCREEN_ID, GIT_SCREEN_ID, EDITOR_SCREEN_ID, RICHTEXT_SCREEN_ID } from './ids';
 import { registerSlice } from '@hai3/react';
 import repoSlice from './slices/repoSlice';
 import fileSlice from './slices/fileSlice';
 import commentSlice from './slices/commentSlice';
+import editorSlice from './slices/editorSlice';
+import richtextSlice from './slices/richtextSlice';
 import { initializeRepoEffects } from './effects/repoEffects';
 import { initializeFileEffects } from './effects/fileEffects';
 import { initializeCommentEffects } from './effects/commentEffects';
+import { initializeEditorEffects } from './effects/editorEffects';
+import { initializeRichtextEffects } from './effects/richtextEffects';
 
 // Import domain events for module augmentation side effects
 import './events/repoEvents';
 import './events/fileEvents';
 import './events/commentEvents';
+import './events/editorEvents';
+import './events/richtextEvents';
 
-// Import for side effect - register git API service
+// Import for side effect - register API services
 import './api/gitApiService';
+import './api/editorApiService';
+import './api/richtextApiService';
 
 // Import module augmentation for accounts service extra fields
 import './api/accounts/extra';
@@ -32,6 +40,14 @@ registerSlice(fileSlice, (dispatch) => {
 
 registerSlice(commentSlice, (dispatch) => {
   initializeCommentEffects(dispatch);
+});
+
+registerSlice(editorSlice, (dispatch) => {
+  initializeEditorEffects(dispatch);
+});
+
+registerSlice(richtextSlice, (dispatch) => {
+  initializeRichtextEffects(dispatch);
 });
 
 /**
@@ -134,6 +150,22 @@ export const demoScreenset: ScreensetConfig = {
         icon: 'lucide:git-branch',
       },
       screen: () => import('./screens/git/GitScreen'),
+    },
+    {
+      menuItem: {
+        id: EDITOR_SCREEN_ID,
+        label: `screenset.${DEMO_SCREENSET_ID}:screens.${EDITOR_SCREEN_ID}.title`,
+        icon: 'lucide:file-edit',
+      },
+      screen: () => import('./screens/editor/EditorScreen'),
+    },
+    {
+      menuItem: {
+        id: RICHTEXT_SCREEN_ID,
+        label: `screenset.${DEMO_SCREENSET_ID}:screens.${RICHTEXT_SCREEN_ID}.title`,
+        icon: 'lucide:file-text',
+      },
+      screen: () => import('./screens/richtext/RichTextScreen'),
     },
   ],
 };

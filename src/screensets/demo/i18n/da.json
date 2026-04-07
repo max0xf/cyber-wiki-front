@@ -13,6 +13,12 @@
     },
     "uikit": {
       "title": "UI-kit elementer"
+    },
+    "editor": {
+      "title": "Markdown Editor"
+    },
+    "richtext": {
+      "title": "Rich Text"
     }
   }
 }

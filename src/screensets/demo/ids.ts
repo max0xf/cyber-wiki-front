@@ -21,3 +21,5 @@ export const CURRENT_THEME_SCREEN_ID = 'theme';
 export const PROFILE_SCREEN_ID = 'profile';
 export const UI_KIT_ELEMENTS_SCREEN_ID = 'uikit';
 export const GIT_SCREEN_ID = 'git';
+export const EDITOR_SCREEN_ID = 'editor';
+export const RICHTEXT_SCREEN_ID = 'richtext';
