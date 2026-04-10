@@ -1,0 +1,14 @@
+{
+  "title": "Sign In to CyberWiki",
+  "username": "Username",
+  "usernamePlaceholder": "Enter your username",
+  "usernameRequired": "Username is required",
+  "password": "Password",
+  "passwordPlaceholder": "Enter your password",
+  "passwordRequired": "Password is required",
+  "login": "Sign In",
+  "loggingIn": "Signing in...",
+  "forgotPassword": "Forgot password?",
+  "noAccount": "Don't have an account?",
+  "signUp": "Sign up"
+}

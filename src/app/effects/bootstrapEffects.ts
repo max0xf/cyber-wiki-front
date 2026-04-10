@@ -8,6 +8,7 @@
 import { trim } from 'lodash';
 import { eventBus, setUser, setHeaderLoading, apiRegistry, type AppDispatch, type HeaderUser } from '@hai3/react';
 import { AccountsApiService, type ApiUser } from '@/app/api';
+import { setUser as setAuthUser } from '@/screensets/auth/slices/auth/auth';
 
 /**
  * Convert API user to header user info
@@ -43,11 +44,37 @@ export function registerBootstrapEffects(appDispatch: AppDispatch): void {
       const accountsService = apiRegistry.getService(AccountsApiService);
       const response = await accountsService.getCurrentUser();
       if (response?.user) {
+        const apiUser = response.user as any; // Backend returns UserInfoSerializer
         dispatch(setUser(toHeaderUser(response.user)));
+
+        // Also set auth state to maintain session (use 'session' as token placeholder)
+        const authUser = {
+          id: apiUser.id,
+          username: apiUser.username,
+          email: apiUser.email || '',
+          role: apiUser.role || 'user',
+        };
+        const authToken = 'session'; // Placeholder for session-based auth
+
+        dispatch(setAuthUser({ user: authUser, token: authToken }));
+
+        // Save to localStorage for persistence across page reloads
+        localStorage.setItem('auth_token', authToken);
+        localStorage.setItem('auth_user', JSON.stringify(authUser));
       }
     } catch (error) {
       console.warn('Failed to fetch user:', error);
       dispatch(setHeaderLoading(false));
+
+      // If session is invalid (401), clear localStorage auth data
+      if (error instanceof Error && error.message.includes('Not authenticated')) {
+        console.log('[Bootstrap] Session invalid, clearing localStorage auth');
+        localStorage.removeItem('auth_token');
+        localStorage.removeItem('auth_user');
+        // Also clear auth state to force re-login
+        const { clearAuth } = await import('@/screensets/auth/slices/auth/auth');
+        dispatch(clearAuth());
+      }
     }
   });
 

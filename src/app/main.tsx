@@ -6,6 +6,7 @@ import { Toaster, applyTheme } from '@hai3/uikit';
 import { AccountsApiService } from '@/app/api';
 import '@hai3/uikit/styles'; // UI Kit styles
 import '@/screensets/screensetRegistry'; // Auto-registers screensets (includes API services + mocks + i18n loaders)
+import '@/screensets/auth/authScreenset'; // Register auth slice and effects
 import '@/app/events/bootstrapEvents'; // Register app-level events (type augmentation)
 import { registerBootstrapEffects } from '@/app/effects/bootstrapEffects'; // Register app-level effects
 import App from './App';
@@ -28,8 +29,8 @@ const app = createHAI3App({
   themes: { applyFn: applyTheme as ThemeApplyFn },
 });
 
-// Enable mock mode (no real backend available)
-toggleMockMode(true);
+// Disable mock mode to use real backend
+toggleMockMode(false);
 
 // Register app-level effects (pass store dispatch)
 registerBootstrapEffects(app.store.dispatch);

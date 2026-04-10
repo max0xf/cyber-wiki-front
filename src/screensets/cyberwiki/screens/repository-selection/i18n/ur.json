@@ -1,0 +1,15 @@
+{
+  "title": "Select Repository",
+  "subtitle": "Browse and select repositories to configure for documentation",
+  "search_placeholder": "Search repositories...",
+  "no_repositories": "No repositories found",
+  "loading": "Loading repositories...",
+  "error_loading": "Failed to load repositories",
+  "favorite": "Favorite",
+  "recent": "Recent",
+  "all": "All Repositories",
+  "configure": "Configure",
+  "view": "View",
+  "last_updated": "Last updated",
+  "provider": "Provider"
+}

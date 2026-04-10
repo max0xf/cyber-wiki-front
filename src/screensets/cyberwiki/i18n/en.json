@@ -1,0 +1,20 @@
+{
+  "screens": {
+    "repository-selection": {
+      "title": "Repositories",
+      "description": "Browse and select repositories"
+    },
+    "repository-view": {
+      "title": "Repository View",
+      "description": "View repository files and documents"
+    },
+    "repository-configuration": {
+      "title": "Repository Settings",
+      "description": "Configure repository document index"
+    },
+    "configuration": {
+      "title": "Configuration",
+      "description": "Configure git provider credentials"
+    }
+  }
+}

@@ -23,7 +23,7 @@ export class AccountsApiService extends BaseApiService {
       timeout: 30000,
     });
 
-    super({ baseURL: '/api/accounts' }, restProtocol);
+    super({ baseURL: '/api/auth/v1' }, restProtocol);
 
     // Register mock plugin (framework controls when it's active based on mock mode toggle)
     this.registerPlugin(
@@ -37,9 +37,27 @@ export class AccountsApiService extends BaseApiService {
 
   /**
    * Get current authenticated user
+   * Uses session-based authentication via cookies
    */
   async getCurrentUser(): Promise<GetCurrentUserResponse> {
-    return this.protocol(RestProtocol).get<GetCurrentUserResponse>('/user/current');
+    // Make request with credentials to include session cookie
+    const response = await fetch('/api/auth/v1/me', {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      // If unauthorized, return empty user (not logged in)
+      if (response.status === 401) {
+        throw new Error('Not authenticated');
+      }
+      throw new Error('Failed to fetch current user');
+    }
+
+    return response.json();
   }
 }
 

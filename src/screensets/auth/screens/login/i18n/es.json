@@ -1,0 +1,14 @@
+{
+  "title": "Iniciar Sesión en CyberWiki",
+  "username": "Usuario",
+  "usernamePlaceholder": "Ingrese su usuario",
+  "usernameRequired": "El usuario es requerido",
+  "password": "Contraseña",
+  "passwordPlaceholder": "Ingrese su contraseña",
+  "passwordRequired": "La contraseña es requerida",
+  "login": "Iniciar Sesión",
+  "loggingIn": "Iniciando sesión...",
+  "forgotPassword": "¿Olvidó su contraseña?",
+  "noAccount": "¿No tiene una cuenta?",
+  "signUp": "Registrarse"
+}

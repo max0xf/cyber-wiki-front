@@ -1,0 +1,13 @@
+{
+  "title": "Repository View",
+  "subtitle": "Browse and view repository files and documents",
+  "document_mode": "Document View",
+  "developer_mode": "Developer View",
+  "loading_tree": "Loading file tree...",
+  "loading_content": "Loading content...",
+  "error_loading_tree": "Failed to load file tree",
+  "error_loading_content": "Failed to load content",
+  "no_file_selected": "Select a file to view its content",
+  "expand_all": "Expand All",
+  "collapse_all": "Collapse All"
+}

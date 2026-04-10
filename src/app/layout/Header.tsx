@@ -7,7 +7,9 @@
 
 import React from 'react';
 import { useAppSelector, type HeaderState } from '@hai3/react';
-import { UserInfo } from '@hai3/uikit';
+import { UserInfo, Button } from '@hai3/uikit';
+import { ButtonVariant } from '@hai3/uikit';
+import { logoutAction } from '@/screensets/auth/actions/auth';
 
 export interface HeaderProps {
   children?: React.ReactNode;
@@ -19,16 +21,33 @@ export const Header: React.FC<HeaderProps> = ({ children }) => {
   const user = headerState?.user;
   const loading = headerState?.loading ?? false;
 
+  const handleLogout = () => {
+    if (window.confirm('Are you sure you want to logout?')) {
+      logoutAction();
+      // Redirect to login page
+      window.location.href = '/';
+    }
+  };
+
   return (
     <header className="h-16 flex items-center px-4 border-b border-border bg-background">
       {children}
-      <div className="ml-auto">
+      <div className="ml-auto flex items-center gap-4">
         <UserInfo
           displayName={user?.displayName}
           email={user?.email}
           avatarUrl={user?.avatarUrl}
           loading={loading}
         />
+        {user && (
+          <Button
+            variant={ButtonVariant.Outline}
+            size="sm"
+            onClick={handleLogout}
+          >
+            Logout
+          </Button>
+        )}
       </div>
     </header>
   );

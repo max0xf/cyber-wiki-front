@@ -1,0 +1,22 @@
+{
+  "title": "Configure Repository",
+  "subtitle": "Configure document index and navigation settings",
+  "document_index": "Document Index",
+  "included_extensions": "Included File Extensions",
+  "included_extensions_help": "File extensions to show in Document View (e.g., .md, .mdx)",
+  "excluded_paths": "Excluded Paths",
+  "excluded_paths_help": "Glob patterns for files/directories to exclude",
+  "title_extraction": "Title Extraction Strategy",
+  "title_extraction_help": "How to extract document titles",
+  "first_heading": "First Markdown Heading",
+  "frontmatter": "Front-matter Field",
+  "first_line": "First Non-empty Line",
+  "filename": "Filename",
+  "default_view_mode": "Default View Mode",
+  "document_view": "Document View",
+  "developer_view": "Developer View",
+  "save": "Save Configuration",
+  "cancel": "Cancel",
+  "saving": "Saving...",
+  "saved": "Configuration saved successfully"
+}
